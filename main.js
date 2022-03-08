@@ -1,30 +1,30 @@
-const names = [
-    'Hole-in-one!',
-    'Eagle',
-    'Birdie',
-    'Par',
-    'Bogey',
-    'Double Bogey',
-    'Go Home!'
-]
+// var userInput = ''
 
-function golfScore(par, strokes) {
-    // Only change code below this line
-    if (strokes == 1) {
-        return 'Hole-in-one!'
-    } else if (strokes <= par - 2) {
-        return 'Eagle'
-    } else if (strokes == par - 1) {
-        return 'Birdie'
-    } else if (strokes == par) {
-        return 'Par'
-    } else if (strokes == par + 1) {
-        return 'Bogey'
-    } else if (strokes == par + 2) {
-        return 'Double Bogey'
-    } else if (strokes >= par + 3) {
-        return 'Go Home!'
-    }
-    return 'Change Me' // Only change code above this line}
+function golfScore() {
+    var userInput = document.getElementById('par').value
+
+    // let pares = par.value
+    // console.log(par)
+    // let names = ''
+    // if (strokes == par) {
+    //     names = 'Hole-in-one!'
+    // } else if (strokes < par) {
+    //     names = 'Eagle'
+    // } else if (strokes > par) {
+    //     names = 'Birdie'
+    // }
+    // else if (strokes == par) {
+    //     names = 'Par'
+    // } else if (strokes == par + 1) {
+    //     names = 'Bogey'
+    // } else if (strokes == par + 2) {
+    //     names = 'Double Bogey'
+    // } else if (strokes >= par + 3) {
+    //     names = 'Go Home!'
+    // }
+    // alert(names)
+    document.getElementById('printResult').innerHTML =
+        'The result is: ' + userInput
 }
-golfScore(5, 4)
+
+golfScore()
